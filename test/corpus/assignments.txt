@@ -1,0 +1,25 @@
+====================
+Assignment - Boolean
+====================
+
+x := false
+
+---
+
+(source_file
+  (assignment
+    (identifier)
+    (boolean)))
+
+====================
+Assignment - Integer
+====================
+
+x := 12345
+
+---
+
+(source_file
+  (assignment
+    (identifier)
+    (integer)))

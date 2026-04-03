@@ -1,0 +1,59 @@
+===========================
+While - Boolean Expressions
+===========================
+
+while (true) false
+
+---
+
+(source_file
+    (while_expr
+        (boolean)
+        (boolean)))
+
+===========================
+While - Integer Expressions
+===========================
+
+while (1) 2
+
+---
+
+(source_file
+    (while_expr
+        (integer)
+        (integer)))
+
+====================
+While - If Condition
+====================
+
+while (if 2 then true else false) 2
+
+---
+
+(source_file
+    (while_expr
+        (if_expr
+            (integer)
+            (boolean)
+            (boolean))
+        (integer)))
+
+===================================
+While - Binary Expression Condition
+===================================
+
+while (1 + 2 < 5) 10
+
+---
+(source_file
+    (while_expr
+        (binary_exp
+            (binary_exp
+                (integer)
+                (binary_op)
+                (integer))
+            (binary_op)
+            (integer))
+        (integer)))

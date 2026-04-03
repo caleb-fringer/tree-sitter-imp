@@ -1,0 +1,65 @@
+========================
+If - Boolean Expressions
+========================
+
+if true then 
+    true 
+else 
+    false
+
+---
+
+(source_file
+  (if_expr
+    (boolean)
+    (boolean)
+    (boolean)))
+
+========================
+If - Integer Expressions
+========================
+
+if 1 then 2 else 3
+
+---
+
+(source_file
+  (if_expr
+    (integer)
+    (integer)
+    (integer)))
+
+============================
+If - Mixed Value Expressions
+============================
+
+if 1 then true else 45
+
+---
+
+(source_file
+  (if_expr
+    (integer)
+    (boolean)
+    (integer)))
+
+============================
+If - Assignment Expressions
+============================
+
+if x := true then y := 10 else y := 5
+
+---
+
+(source_file
+  (if_expr
+    (assignment
+        (identifier)
+        (boolean))
+    (assignment
+        (identifier)
+        (integer))
+    (assignment
+        (identifier)
+        (integer))))
+

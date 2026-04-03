@@ -1,0 +1,43 @@
+=========
+Value - 1
+=========
+
+1
+
+---
+
+(source_file
+  (integer))
+
+===========
+Value - 100
+===========
+
+100
+
+---
+
+(source_file
+  (integer))
+
+============
+Value - True
+============
+
+true
+
+---
+
+(source_file
+  (boolean))
+
+=============
+Value - False
+=============
+
+false
+
+---
+
+(source_file
+  (boolean))
