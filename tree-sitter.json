@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "imp",
+      "camelcase": "Imp",
+      "title": "Imp",
+      "scope": "source.imp",
+      "file-types": [
+        "imp"
+      ],
+      "injection-regex": "^imp$",
+      "class-name": "TreeSitterImp"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "GPL-3.0-or-later",
+    "description": "An impy little language",
+    "authors": [
+      {
+        "name": "Caleb Fringer",
+        "url": ""
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/caleb-fringer/tree-sitter-imp",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}
