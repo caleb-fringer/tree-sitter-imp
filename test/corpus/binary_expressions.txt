@@ -1,0 +1,62 @@
+==============================
+Binary - Arithmetic Operations
+==============================
+
+1 + 2 − 3 ∗ 4 / 5
+
+---
+
+(source_file
+  (binary_expr
+    (binary_expr
+      (binary_expr
+        (binary_expr
+          (integer)
+          (binary_op)
+          (integer))
+        (binary_op)
+        (integer))
+      (binary_op)
+      (integer))
+    (binary_op)
+    (integer)))
+
+==============================
+Binary - Relational Operations
+==============================
+
+1 > 2 >= 3 < 4 <= 5
+
+---
+
+(source_file
+  (binary_expr
+    (binary_expr
+      (binary_expr
+        (binary_expr
+          (integer)
+          (binary_op)
+          (integer))
+        (binary_op)
+        (integer))
+      (binary_op)
+      (integer))
+    (binary_op)
+    (integer)))
+
+============================
+Binary - Mixed with Identifiers
+============================
+
+x + y < z
+
+---
+
+(source_file
+  (binary_expr
+    (binary_expr
+      (identifier)
+      (binary_op)
+      (identifier))
+    (binary_op)
+    (identifier)))

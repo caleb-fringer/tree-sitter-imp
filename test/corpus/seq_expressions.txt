@@ -10,3 +10,53 @@ true; 1
   (seq_expr
     (boolean)
     (integer)))
+
+==========================
+Seq - Chained Expressions
+==========================
+
+1 ; 2 ; 3
+
+---
+
+(source_file
+  (seq_expr
+    (seq_expr
+      (integer)
+      (integer))
+    (integer)))
+
+==========================
+Seq - Assignments
+==========================
+
+x := 10 ; y := true
+
+---
+
+(source_file
+  (seq_expr
+    (assignment
+      (identifier)
+      (integer))
+    (assignment
+      (identifier)
+      (boolean))))
+
+==========================
+Seq - Control Structures
+==========================
+
+if true then 1 else 2 end ; while false do 3 end
+
+---
+
+(source_file
+  (seq_expr
+    (if_expr
+      (boolean)
+      (integer)
+      (integer))
+    (while_expr
+      (boolean)
+      (integer))))

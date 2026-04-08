@@ -1,0 +1,80 @@
+======================
+Nested - If within If
+======================
+
+if true then
+  if 1 then 2 else 3 end
+else
+  4
+end
+
+---
+
+(source_file
+  (if_expr
+    (boolean)
+    (if_expr
+      (integer)
+      (integer)
+      (integer))
+    (integer)))
+
+=========================
+Nested - While within If
+=========================
+
+if x then
+  while true do 1 end
+else
+  2
+end
+
+---
+
+(source_file
+  (if_expr
+    (identifier)
+    (while_expr
+      (boolean)
+      (integer))
+    (integer)))
+
+=========================
+Nested - If within While
+=========================
+
+while x < 10 do
+  if true then 1 else 2 end
+end
+
+---
+
+(source_file
+  (while_expr
+    (binary_expr
+      (identifier)
+      (binary_op)
+      (integer))
+    (if_expr
+      (boolean)
+      (integer)
+      (integer))))
+
+============================
+Nested - While within While
+============================
+
+while true do
+  while false do
+    1
+  end
+end
+
+---
+
+(source_file
+  (while_expr
+    (boolean)
+    (while_expr
+      (boolean)
+      (integer))))
