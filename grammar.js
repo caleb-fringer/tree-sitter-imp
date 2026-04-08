@@ -26,6 +26,7 @@ export default grammar({
       $.assignment,
       $.if_expr,
       $.while_expr,
+      $.seq_expr,
     ),
 
     identifier: $ => /[[:alpha:]][[:alnum:]]*/,
@@ -35,6 +36,12 @@ export default grammar({
       ":=",
       field("val", $._value),
     ),
+
+    seq_expr: $ => prec.left(seq(
+      field("e1", $.expression),
+      ";",
+      field("e2", $.expression)
+    )),
 
     integer: $ => /\d+/,
 
@@ -71,14 +78,15 @@ export default grammar({
       field("if_val", $.expression),
       "else",
       field("else_val", $.expression),
+      "end"
     ),
 
     while_expr: $ => seq(
       "while",
-      "(",
       field("cond", $.expression),
-      ")",
+      "do",
       field("eval_expr", $.expression),
+      "end"
     ),
   }
 });

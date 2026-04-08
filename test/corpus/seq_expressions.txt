@@ -1,0 +1,12 @@
+===========================
+Seq - Value Expressions
+===========================
+
+true; 1
+
+---
+
+(source_file
+  (seq_expr
+    (boolean)
+    (integer)))

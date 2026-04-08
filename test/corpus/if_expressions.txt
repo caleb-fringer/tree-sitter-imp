@@ -6,6 +6,7 @@ if true then
     true 
 else 
     false
+end
 
 ---
 
@@ -19,7 +20,7 @@ else
 If - Integer Expressions
 ========================
 
-if 1 then 2 else 3
+if 1 then 2 else 3 end
 
 ---
 
@@ -33,7 +34,7 @@ if 1 then 2 else 3
 If - Mixed Value Expressions
 ============================
 
-if 1 then true else 45
+if 1 then true else 45 end
 
 ---
 
@@ -47,19 +48,18 @@ if 1 then true else 45
 If - Assignment Expressions
 ============================
 
-if x := true then y := 10 else y := 5
+if x := true then y := 10 else y := 5 end
 
 ---
 
 (source_file
   (if_expr
     (assignment
-        (identifier)
-        (boolean))
+      (identifier)
+      (boolean))
     (assignment
-        (identifier)
-        (integer))
+      (identifier)
+      (integer))
     (assignment
-        (identifier)
-        (integer))))
-
+      (identifier)
+      (integer))))
