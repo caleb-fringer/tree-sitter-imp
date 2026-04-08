@@ -56,11 +56,11 @@ export default grammar({
       "<="
     ),
 
-    binary_expr: $ => prec(1,
+    binary_expr: $ => prec.left(1,
       seq(
-        prec.left(field("operand_1", $.expression)),
-        prec.left(field("operator", $.binary_op)),
-        prec.left(field("operand_2", $.expression)),
+        field("operand_1", $.expression),
+        field("operator", $.binary_op),
+        field("operand_2", $.expression),
       )
     ),
 

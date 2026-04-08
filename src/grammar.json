@@ -136,45 +136,33 @@
       ]
     },
     "binary_expr": {
-      "type": "PREC",
+      "type": "PREC_LEFT",
       "value": 1,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "PREC_LEFT",
-            "value": 0,
+            "type": "FIELD",
+            "name": "operand_1",
             "content": {
-              "type": "FIELD",
-              "name": "operand_1",
-              "content": {
-                "type": "SYMBOL",
-                "name": "expression"
-              }
+              "type": "SYMBOL",
+              "name": "expression"
             }
           },
           {
-            "type": "PREC_LEFT",
-            "value": 0,
+            "type": "FIELD",
+            "name": "operator",
             "content": {
-              "type": "FIELD",
-              "name": "operator",
-              "content": {
-                "type": "SYMBOL",
-                "name": "binary_op"
-              }
+              "type": "SYMBOL",
+              "name": "binary_op"
             }
           },
           {
-            "type": "PREC_LEFT",
-            "value": 0,
+            "type": "FIELD",
+            "name": "operand_2",
             "content": {
-              "type": "FIELD",
-              "name": "operand_2",
-              "content": {
-                "type": "SYMBOL",
-                "name": "expression"
-              }
+              "type": "SYMBOL",
+              "name": "expression"
             }
           }
         ]
