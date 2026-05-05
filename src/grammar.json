@@ -288,7 +288,7 @@
         },
         {
           "type": "STRING",
-          "value": "end"
+          "value": "done"
         }
       ]
     }
@@ -306,5 +306,40 @@
   "supertypes": [
     "expression"
   ],
-  "reserved": {}
+  "reserved": {
+    "global_keywords": [
+      {
+        "type": "STRING",
+        "value": "if"
+      },
+      {
+        "type": "STRING",
+        "value": "then"
+      },
+      {
+        "type": "STRING",
+        "value": "else"
+      },
+      {
+        "type": "STRING",
+        "value": "end"
+      },
+      {
+        "type": "STRING",
+        "value": "while"
+      },
+      {
+        "type": "STRING",
+        "value": "do"
+      },
+      {
+        "type": "STRING",
+        "value": "end"
+      },
+      {
+        "type": "STRING",
+        "value": "done"
+      }
+    ]
+  }
 }

@@ -16,6 +16,12 @@ export default grammar({
 
   word: $ => $.identifier,
 
+  reserved: {
+    global_keywords: $ => [
+      "if", "then", "else", "end", "while", "do", "end", "done"
+    ],
+  },
+
   rules: {
     source_file: $ => repeat($.expression),
 
@@ -88,7 +94,7 @@ export default grammar({
       field("cond", $.expression),
       "do",
       field("eval_expr", $.expression),
-      "end"
+      "done"
     ),
   }
 });

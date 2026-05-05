@@ -2,7 +2,7 @@
 While - Boolean Expressions
 ===========================
 
-while true do false end
+while true do false done
 
 ---
 
@@ -15,7 +15,7 @@ while true do false end
 While - Integer Expressions
 ===========================
 
-while 1 do 2 end
+while 1 do 2 done
 
 ---
 
@@ -28,7 +28,7 @@ while 1 do 2 end
 While - If Condition
 ====================
 
-while if 2 then true else false end do 2 end
+while if 2 then true else false end do 2 done
 
 ---
 
@@ -44,7 +44,7 @@ while if 2 then true else false end do 2 end
 While - Binary Expression Condition
 ===================================
 
-while 1 + 2 < 5 do 10 end
+while 1 + 2 < 5 do 10 done
 
 ---
 

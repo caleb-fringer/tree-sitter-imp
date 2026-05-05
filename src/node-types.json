@@ -254,6 +254,10 @@
     "named": false
   },
   {
+    "type": "done",
+    "named": false
+  },
+  {
     "type": "else",
     "named": false
   },

@@ -47,7 +47,7 @@ x := 10 ; y := true
 Seq - Control Structures
 ==========================
 
-if true then 1 else 2 end ; while false do 3 end
+if true then 1 else 2 end ; while false do 3 done
 
 ---
 

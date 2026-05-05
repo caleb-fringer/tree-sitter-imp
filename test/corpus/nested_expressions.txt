@@ -24,7 +24,7 @@ Nested - While within If
 =========================
 
 if x then
-  while true do 1 end
+  while true do 1 done
 else
   2
 end
@@ -45,7 +45,7 @@ Nested - If within While
 
 while x < 10 do
   if true then 1 else 2 end
-end
+done
 
 ---
 
@@ -67,8 +67,8 @@ Nested - While within While
 while true do
   while false do
     1
-  end
-end
+  done
+done
 
 ---
 

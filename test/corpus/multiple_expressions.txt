@@ -24,7 +24,7 @@ Source - Mixed Top-Level
 =============================
 
 x := 1
-while true do 2 end
+while true do 2 done
 3 ; 4
 
 ---
