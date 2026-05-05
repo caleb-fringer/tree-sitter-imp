@@ -63,3 +63,19 @@ if x := true then y := 10 else y := 5 end
     (assignment
       (identifier)
       (integer))))
+
+==================
+If - Optional Else
+==================
+
+if true then 
+    2
+end
+
+---
+
+(source_file
+  (if_expr
+    (boolean)
+    (integer)))
+

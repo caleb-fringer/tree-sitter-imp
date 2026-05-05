@@ -76,8 +76,10 @@ export default grammar({
       field("cond", $.expression),
       "then",
       field("if_val", $.expression),
-      "else",
-      field("else_val", $.expression),
+      optional(seq(
+        "else",
+        field("else_val", $.expression),
+      )),
       "end"
     ),
 
