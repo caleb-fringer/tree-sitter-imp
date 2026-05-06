@@ -1,8 +1,8 @@
 [
   "if"
-	"then"
-	"else"
-	"end"
+  "then"
+  "else"
+  "end"
 ] @keyword.conditional
 
 [
@@ -10,13 +10,6 @@
  "do"
  "done"
 ] @keyword.repeat
-
-";" @punctuation.delimiter
-
-[
- "("
- ")"
-] @punctuation.bracket
 
 (integer) @number
 
