@@ -253,7 +253,15 @@
     }
   },
   {
+    "type": "*",
+    "named": false
+  },
+  {
     "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
     "named": false
   },
   {
@@ -330,14 +338,6 @@
   },
   {
     "type": "while",
-    "named": false
-  },
-  {
-    "type": "−",
-    "named": false
-  },
-  {
-    "type": "∗",
     "named": false
   }
 ]

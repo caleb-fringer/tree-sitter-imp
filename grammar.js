@@ -72,8 +72,8 @@ export default grammar({
 
     arithmetic_op: $ => choice(
       "+",
-      "−",
-      "∗",
+      "-",
+      "*",
       "/",
     ),
 
