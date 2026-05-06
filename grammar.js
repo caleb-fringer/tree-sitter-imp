@@ -29,6 +29,7 @@ export default grammar({
       $._value,
       $.identifier,
       $.binary_expr,
+      $.declaration,
       $.assignment,
       $.if_expr,
       $.while_expr,
@@ -37,11 +38,17 @@ export default grammar({
 
     identifier: $ => /[[:alpha:]][[:alnum:]]*/,
 
-    assignment: $ => seq(
+    declaration: $ => prec.left(seq(
       field("id", $.identifier),
       ":=",
-      field("val", $._value),
-    ),
+      field("val", $.expression)
+    )),
+
+    assignment: $ => prec.left(seq(
+      field("id", $.identifier),
+      "=",
+      field("val", $.expression),
+    )),
 
     seq_expr: $ => prec.left(seq(
       field("e1", $.expression),
@@ -58,11 +65,19 @@ export default grammar({
       $.boolean,
     ),
 
-    binary_op: $ => choice(
+    _binary_op: $ => choice(
+      $.arithmetic_op,
+      $.relational_op,
+    ),
+
+    arithmetic_op: $ => choice(
       "+",
       "−",
       "∗",
       "/",
+    ),
+
+    relational_op: $ => choice(
       ">",
       ">=",
       "<",
@@ -72,7 +87,7 @@ export default grammar({
     binary_expr: $ => prec.left(1,
       seq(
         field("operand_1", $.expression),
-        field("operator", $.binary_op),
+        field("operator", $._binary_op),
         field("operand_2", $.expression),
       )
     ),

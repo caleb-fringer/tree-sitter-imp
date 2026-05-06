@@ -27,7 +27,7 @@ Seq - Chained Expressions
     (integer)))
 
 ==========================
-Seq - Assignments
+Seq - Declarations
 ==========================
 
 x := 10 ; y := true
@@ -36,10 +36,10 @@ x := 10 ; y := true
 
 (source_file
   (seq_expr
-    (assignment
+    (declaration
       (identifier)
       (integer))
-    (assignment
+    (declaration
       (identifier)
       (boolean))))
 

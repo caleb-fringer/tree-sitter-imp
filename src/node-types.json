@@ -16,6 +16,10 @@
         "named": true
       },
       {
+        "type": "declaration",
+        "named": true
+      },
+      {
         "type": "identifier",
         "named": true
       },
@@ -38,6 +42,11 @@
     ]
   },
   {
+    "type": "arithmetic_op",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "assignment",
     "named": true,
     "fields": {
@@ -56,11 +65,7 @@
         "required": true,
         "types": [
           {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "integer",
+            "type": "expression",
             "named": true
           }
         ]
@@ -96,7 +101,11 @@
         "required": true,
         "types": [
           {
-            "type": "binary_op",
+            "type": "arithmetic_op",
+            "named": true
+          },
+          {
+            "type": "relational_op",
             "named": true
           }
         ]
@@ -104,14 +113,35 @@
     }
   },
   {
-    "type": "binary_op",
+    "type": "boolean",
     "named": true,
     "fields": {}
   },
   {
-    "type": "boolean",
+    "type": "declaration",
     "named": true,
-    "fields": {}
+    "fields": {
+      "id": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "val": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "if_expr",
@@ -148,6 +178,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "relational_op",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "seq_expr",
@@ -239,6 +274,10 @@
   },
   {
     "type": "<=",
+    "named": false
+  },
+  {
+    "type": "=",
     "named": false
   },
   {

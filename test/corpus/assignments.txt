@@ -2,7 +2,7 @@
 Assignment - Boolean
 ====================
 
-x := false
+x = false
 
 ---
 
@@ -15,7 +15,7 @@ x := false
 Assignment - Integer
 ====================
 
-x := 12345
+x = 12345
 
 ---
 
@@ -23,3 +23,19 @@ x := 12345
   (assignment
     (identifier)
     (integer)))
+
+===================================
+Assignment - Binary Op w/ Reference
+===================================
+
+x = x + 1
+
+---
+
+(source_file
+  (assignment
+    (identifier)
+    (binary_expr
+      (identifier)
+      (arithmetic_op)
+      (integer))))

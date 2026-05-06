@@ -1,5 +1,5 @@
 =============================
-Source - Multiple Assignments
+Source - Multiple Declarations
 =============================
 
 x := 1
@@ -9,13 +9,13 @@ z := 100
 ---
 
 (source_file
-  (assignment
+  (declaration
     (identifier)
     (integer))
-  (assignment
+  (declaration
     (identifier)
     (boolean))
-  (assignment
+  (declaration
     (identifier)
     (integer)))
 
@@ -30,7 +30,7 @@ while true do 2 done
 ---
 
 (source_file
-  (assignment
+  (declaration
     (identifier)
     (integer))
   (while_expr

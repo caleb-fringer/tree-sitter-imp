@@ -53,8 +53,32 @@ while 1 + 2 < 5 do 10 done
     (binary_expr
       (binary_expr
         (integer)
-        (binary_op)
+        (arithmetic_op)
         (integer))
-      (binary_op)
+      (relational_op)
       (integer))
     (integer)))
+
+=============================
+While - Assignment Expression
+=============================
+x := 0
+while x < 10 do x = x + 1 done
+
+---
+
+(source_file
+  (declaration
+    (identifier)
+    (integer))
+  (while_expr
+    (binary_expr
+        (identifier)
+        (relational_op)
+        (integer))
+    (assignment
+      (identifier)
+      (binary_expr
+        (identifier)
+        (arithmetic_op)
+        (integer)))))

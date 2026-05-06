@@ -45,7 +45,7 @@ if 1 then true else 45 end
     (integer)))
 
 ============================
-If - Assignment Expressions
+If - Declaration Expressions
 ============================
 
 if x := true then y := 10 else y := 5 end
@@ -54,13 +54,13 @@ if x := true then y := 10 else y := 5 end
 
 (source_file
   (if_expr
-    (assignment
+    (declaration
       (identifier)
       (boolean))
-    (assignment
+    (declaration
       (identifier)
       (integer))
-    (assignment
+    (declaration
       (identifier)
       (integer))))
 

@@ -53,7 +53,7 @@ done
   (while_expr
     (binary_expr
       (identifier)
-      (binary_op)
+      (relational_op)
       (integer))
     (if_expr
       (boolean)
